@@ -1,0 +1,38 @@
+.Product {
+  background-image: url("../assets/images/Rectangle 3.png");
+}
+
+.product-pagination-custom .swiper-pagination-bullet {
+  background-color: #d9d9d9 !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-pagination-custom .swiper-pagination-bullet-active {
+  background-color: #766969 !important;
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+}
+
+.About{
+    background-image: url("../assets/images/Rectangle 4.png");
+}
+
+.Blurb{
+background-image: url('../assets/images/Rectangle 5.png');
+}
+
+.blurb-title{
+    font-family: "Unkempt",sans-serif;
+}
+
+@media (max-width:640px) {
+  .About{
+    background-image: url("../assets/images/Rectangle 57.png");
+}
+}

@@ -1,0 +1,25 @@
+.Slider1 {
+  background-image: url("../assets/images/Rectangle1.png");
+}
+
+.Slider2 {
+  background-image: url("../assets/images/Rectangle2.png");
+}
+
+.pagination-custom .swiper-pagination-bullet {
+  background-color: #b39b9b !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination-custom .swiper-pagination-bullet-active {
+  background-color: #766969 !important;
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+}
+
+
