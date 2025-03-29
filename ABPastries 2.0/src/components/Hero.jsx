@@ -13,7 +13,7 @@ import 'swiper/css/effect-fade';
 const Hero = () => {
     return (
         <>
-            <div className="relative">
+            <div className="relative -mt-[56px]">
                 <button className="swiper-button-prev-custom absolute left-0 top-1/2 w-20 -translate-y-1/2 text-white p-2  z-20">
                     <img className='w-full' src={left} alt="" />
                 </button>

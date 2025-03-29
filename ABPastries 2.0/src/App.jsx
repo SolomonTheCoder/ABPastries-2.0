@@ -6,6 +6,8 @@ import Cart from "./pages/Cart"
 import Navbar from "./components/Navbar"
 import './App.css'
 import Footer from './components/Footer'
+import ProductDetail from './pages/ProductDetail'
+
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
         <Route path='/store' element={<Store />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/product/:id' element={<ProductDetail />} />
       </Routes>
       <Footer />
     </>

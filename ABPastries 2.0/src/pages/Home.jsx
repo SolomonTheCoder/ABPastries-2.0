@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y } from 'swiper/modules';
+import Bg from "../assets/images/Rectangle 3.png"
 import Hero from '../components/Hero'
 import left from "../assets/icons/arrow-left-2-duotone.svg"
 import right from "../assets/icons/arrow-right-2-duotone.svg"
@@ -25,10 +26,12 @@ const Home = () => {
         { id: 3, name: "FRESHLY BAKED PIES", image: food3, price: 2 }
     ]
 
+ 
+
     return (
         <>
             <Hero />
-            <section className='Product h-svh space-y-20 relative bg-no-repeat bg-cover'>
+            <section className="Product h-full space-y-20 relative bg-no-repeat bg-cover bg-center p-10">
                 <button className="product-button-prev-custom absolute left-0 top-1/2 w-20 -translate-y-1/2 text-white p-2  z-10">
                     <img className='w-full' src={left} alt="" />
                 </button>
@@ -37,6 +40,7 @@ const Home = () => {
                 </button>
                 <h1 className=' text-2xl md:text-6xl text-center py-10 m-0'>Not just a bakery, but <span className='text-[#B10000]'>a family</span></h1>
                 <Swiper
+                    className='m-0'
                     modules={[Navigation, Pagination, A11y]}
                     spaceBetween={30}
                     slidesPerView={3}
@@ -67,14 +71,10 @@ const Home = () => {
                         clickable: true,
                         el: ".product-pagination-custom"
                     }}
-                    scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
                 >
-
                     {foods.map((food) => (
                         <SwiperSlide key={food.id}>
-                            <ProductCard image={food.image} name={food.name} price={food.price} icon={icon} />
+                            <ProductCard image={food.image} name={food.name} price={food.price} icon={icon} product={food} />
                         </SwiperSlide>
                     ))}
 
