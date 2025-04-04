@@ -10,8 +10,10 @@ const Footer = () => {
   return (
     <>
       <footer className='bg-[#910F3F] p-15 flex space-x-10 md:justify-between'>
-        <section className=''>
-          <img src={logo2} alt="" />
+        <section className='flex flex-col gap-10'>
+          <div>
+            <img src={logo2} alt="" />
+          </div>
           <div className='text-white flex space-x-10'>
             <div className='space-y-2'>
               <h2 className='text-[14px] md:text-2xl mb-6'>Product</h2>

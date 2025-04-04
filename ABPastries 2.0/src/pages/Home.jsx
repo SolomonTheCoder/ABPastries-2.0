@@ -81,10 +81,10 @@ const Home = () => {
                 </Swiper>
                 <div className='product-pagination-custom absolute bottom-5 left-0 right-0 z-10 flex justify-center  px-4 py-2 rounded-full'></div>
             </section>
-            <section className="About relative h-svh flex flex-row md:justify-between items-center p-5  bg-no-repeat bg-cover ">
-                <div className='Aboutimage hidden md:flex justify-center items-center '>
-                    <img className='absolute z-10 left-10 top-25 w-[35%]' src={front} alt="" />
-                    <img className='absolute top-25 left-40 w-[35%] ' src={back} alt="" />
+            <section className="About relative h-svh flex flex-row md:justify-between items-center gap-10 p-5  bg-no-repeat bg-cover ">
+                <div className='Aboutimage hidden md:flex'>
+                    <img className='z-10 ' src={front} alt="" />
+                    <img className='-ml-110' src={back} alt="" />
                 </div>
                 <div className='Aboutdetail text-white md:text-black md:w-[50%] text-center'>
                     <h2 className='text-3xl md:text-6xl my-5'>About<span className='text-[#FD9D2C] md:text-[#8B4F5E]'> Us</span></h2>

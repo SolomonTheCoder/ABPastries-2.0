@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import "../Styles/Navbar.css"
 import logo from "../assets/images/Logo.png"
 import menu from "../assets/icons/material-symbols--menu-rounded.svg"
 
@@ -11,16 +10,16 @@ const Navbar = () => {
                 </section>
                 <section className="Nav-links hidden md:flex">
                     <ul className="flex flex-row space-x-5 text-[#776565]  ">
-                        <li className="">
+                        <li className="hover:text-black">
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        <li className="hover:text-black">
                             <Link to="/store">Store</Link>
                         </li>
-                        <li>
+                        <li className="hover:text-black">
                             <Link to="/cart">Cart</Link>
                         </li>
-                        <li>
+                        <li className="hover:text-black">
                             <Link to="/contact">Contact Us</Link>
                         </li>
                     </ul>
