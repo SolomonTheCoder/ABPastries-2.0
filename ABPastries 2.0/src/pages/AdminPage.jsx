@@ -1,65 +1,55 @@
-import React, { useState } from 'react'
-import search from "../assets/icons/weui--search-outlined.svg"
-import profile from "../assets/icons/ix--user-profile-filled.svg"
+import React from 'react'
 import add from "../assets/icons/solar--add-circle-broken.svg"
 import image1 from "../assets/images/Rectangle1.png"
 import play from "../assets/icons/solar--play-bold.svg"
 
 const AdminPage = () => {
-  const [file, setFile] = useState()
+  // const [file, setFile] = useState()
 
-  const getFile = (e) => {
-    setFile(URL.createObjectURL(e.target.files[0]))
-  }
+  // const getFile = (e) => {
+  //   setFile(URL.createObjectURL(e.target.files[0]))
+  // }
 
   return (
-    <div className='h-full flex flex-col px-30 py-10 space-y-10'>
-      <div className='flex justify-between'>
-        <div className='flex items-center'>
-          <input className='relative bg-[#D9D9D9] shadow-inner shadow-[#00000017] rounded-2xl w-[311px] h-[39px] px-4 text-2xl' type="text" name="Search" id="search" placeholder='search' />
-          <img className='absolute left-100' src={search} alt="" />
-        </div>
-        <div className='w-15'>
-          <img src={profile} alt="" />
-        </div>
-      </div>
-
-      <div className='text-5xl'><h1>Home</h1></div>
-      <div className='bg-[#FCFCFCC4] shadow-inner shadow-[#00000040] p-10 space-y-5'>
-        <h2 className='text-[40px]'>Carousel</h2>
-        <div className='flex flex-row justify-between items-center gap-10'>
-          <section className='flex flex-col justify-center gap-4'>
-            <div className='bg-[#C4C4C41A] shadow-lg shadow-black/25 h-[423px] flex flex-col justify-center items-center rounded-2xl'>
-              <img src={file} alt="" />
-              <label className='flex flex-col items-center gap-3 text-[20px]' htmlFor='add-image'>
-                <img className='w-19' src={add} alt="" />
-                Add Image...
-              </label>
-              <br />
-              <br />
-              <input className='hidden' type="file" accept='image/*' name="" id="add-image" onChange={getFile} />
-            </div>
-            <input className='bg-[#F2E8E8] py-3 px-3 text-center text-black font-bold shadow-inner shadow-[#00000040] rounded-2xl' type="text" name="" id="" placeholder='Add text' />
-          </section>
-          <section className='flex gap-5'>
-            <div className='flex flex-col justify-center items-center gap-5'>
-              <div className=' shadow-lg shadow-black/25 h-[423px]'>
-                <img className='w-full h-[423px]' src={image1} alt="" />
+    <div className='space-y-10'>
+      <h1 className='text-5xl my-5'>Home</h1>
+      <section>
+        <div className='bg-[#FCFCFCC4] shadow-lg shadow-[#00000040] space-y-10 p-5  '>
+          <h2 className='text-5xl'>Carousel</h2>
+          <main className='flex gap-5 '>
+            <div className='flex flex-col   justify-center items-center gap-5'>
+              <div className='bg-[#C4C4C41A] h-[423px] rounded-2xl shadow-lg shadow-[#00000040] p-9 flex flex-col justify-center items-center gap-3'>
+                <div className='w-20'>
+                  <img src={add} alt="" />
+                </div>
+                <label className='text-center text-[20px]' htmlFor="addImage">Add Image...</label>
+                <input className='hidden' type="file" name="" id="addImage" />
               </div>
-              <input className='bg-[#F2E8E8] py-3 px-3 text-center text-black font-bold shadow-inner shadow-[#00000040] rounded-2xl' type="text" name="" id="" placeholder='Add text' />
+              <input className='bg-[#F2E8E8] text-center font-extrabold shadow-inner shadow-[#00000040] px-1 py-3 rounded-2xl' type="text" id='' placeholder='Add text' />
             </div>
-            <div className='flex flex-col justify-center  items-center gap-5'>
-              <div className=' shadow-lg shadow-black/25 h-[423px]'>
-                <img className='w-full h-[423px]' src={image1} alt="" />
+        
+              <div className='flex flex-col justify-center items-center gap-5'>
+                <div className='bg-[#C4C4C41A]  shadow-lg shadow-[#00000040]  flex flex-col justify-center items-center'>
+                  <div className='w-full h-[423px]  '>
+                    <img className='w-full h-[423px]' src={image1} alt="" />
+                  </div>
+                </div>
+                <input className='bg-[#F2E8E8] text-center font-extrabold shadow-inner shadow-[#00000040] px-5 py-3 rounded-2xl' type="text" id='' placeholder='Add text' />
               </div>
-              <input className='bg-[#F2E8E8] py-3 px-3 text-center  text-black font-bold shadow-inner shadow-[#00000040] rounded-2xl' type="text" name="" id="" placeholder='Add text' />
-            </div>
-          </section>
+              <div className='flex flex-col justify-center items-center gap-5'>
+                <div className='bg-[#C4C4C41A] shadow-lg shadow-[#00000040] flex flex-col justify-center items-center'>
+                  <div className='w-full h-[423px] '>
+                    <img className=' w-full h-[423px] ' src={image1} alt="" />
+                  </div>
+                </div>
+                <input className='bg-[#F2E8E8] text-center font-extrabold shadow-inner shadow-[#00000040] px-5 py-3 rounded-2xl' type="text" id='' placeholder='Add text' />
+              </div>
+          </main>
         </div>
-      </div>
-      <div className='flex justify-end'>
-        <button className='flex gap-3 bg-[#910F3F] px-5 py-3 rounded-2xl text-white '><img className='w-6' src={play} alt="" />Preview Changes</button>
-      </div>
+        <div className='flex justify-end mt-5'>
+          <button className='bg-[#910F3F] text-white text-2xl flex justify-center items-center gap-3 px-5 py-3 rounded-2xl'><img className='w-7' src={play} alt="" />Preview Changes</button>
+        </div>
+      </section>
     </div>
   )
 }

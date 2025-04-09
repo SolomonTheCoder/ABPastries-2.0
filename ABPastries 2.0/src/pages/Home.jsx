@@ -23,7 +23,8 @@ const Home = () => {
     const foods = [
         { id: 1, name: "CHOCOLATE CAKES", image: food1, price: 15 },
         { id: 2, name: "CHIN CHIN", image: food2, price: 7 },
-        { id: 3, name: "FRESHLY BAKED PIES", image: food3, price: 2 }
+        { id: 3, name: "FRESHLY BAKED PIES", image: food3, price: 2 },
+        { id: 4, name: "FRESHLY BAKED PIES", image: food3, price: 2 }
     ]
 
  
@@ -44,7 +45,8 @@ const Home = () => {
                     modules={[Navigation, Pagination, A11y]}
                     spaceBetween={30}
                     slidesPerView={3}
-                    centeredSlides={true}
+                    loop={true}
+                    // centeredSlides={true}
                     navigation={{
                         nextEl: ".product-button-next-custom",
                         prevEl: ".product-button-prev-custom"

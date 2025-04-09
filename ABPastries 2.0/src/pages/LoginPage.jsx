@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import profile from '../assets/icons/ix--user-profile-filled.svg'
 import logo from "../assets/images/Logo 3.png"
@@ -6,7 +6,8 @@ import "../Styles/Login.css"
 
 
 
-const LoginPage = ({ password, setPassword }) => {
+const LoginPage = () => {
+    const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
     const handleClick = () => {

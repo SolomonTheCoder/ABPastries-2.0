@@ -40,7 +40,10 @@ const Store = () => {
 
   const Chips = [
     { id: "chip-1", name: "PLAIN CHIPS", image: Chip1, price: 15.00 },
-    { id: "chip-2", name: "CHIPS WITH PEANUTS", image: Chip2, price: 15.00 }
+    { id: "chip-2", name: "CHIPS WITH PEANUTS", image: Chip2, price: 15.00 },
+    { id: "chip-3", name: "CHIPS WITH PEANUTS", image: Chip2, price: 15.00 },
+    { id: "chip-4", name: "CHIPS WITH PEANUTS", image: Chip2, price: 15.00 },
+    { id: "chip-5", name: "CHIPS WITH PEANUTS", image: Chip2, price: 15.00 }
   ]
 
   const Rolls = [
@@ -219,7 +222,8 @@ const Store = () => {
             <Swiper
               modules={[Navigation, Pagination, A11y]}
               spaceBetween={10}
-              slidesPerView={2}
+              slidesPerView={4}
+              loop={true}
               navigation={{
                 nextEl: ".chip-button-next-custom",
                 prevEl: ".chip-button-prev-custom"
@@ -242,7 +246,7 @@ const Store = () => {
                   spaceBetween: 0,
                 },
               }}
-              centeredSlides={true}
+              // centeredSlides={true}
               pagination={{
                 clickable: true,
                 el: ".chip-pagination-custom"
