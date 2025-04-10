@@ -8,11 +8,11 @@ import ProductDetail from './pages/ProductDetail'
 import ProtectedRoute from './context/ProtectedRoute'
 import AdminPage from './pages/AdminPage'
 import LoginPage from './pages/LoginPage'
-import AdminNav from './components/AdminNav'
 import AdminStore from './pages/AdminStore'
 import AdminSetting from './pages/AdminSetting'
-import ClientTemplate from './components/ClientTemplate'
+import ClientTemplate from './Layout/ClientLayout'
 import EditCategory from './pages/AddProduct'
+import AdminLayout from './Layout/AdminLayout'
 
 
 
@@ -37,10 +37,12 @@ function App() {
 
         <Route path='/login' element={<LoginPage />} />
         <Route element={<ProtectedRoute />}>
-          <Route path='/adminpage' element={<AdminPage />} />
-          <Route path='/adminstore' element={<AdminStore />} />
-          <Route path='/adminsetting' element={<AdminSetting />} />
-          <Route path='/editcategory' element={<EditCategory />} />
+          <Route element={<AdminLayout />}>
+            <Route path='/adminpage' element={<AdminPage />} />
+            <Route path='/adminstore' element={<AdminStore />} />
+            <Route path='/adminsetting' element={<AdminSetting />} />
+            <Route path='/editcategory' element={<EditCategory />} />
+          </Route>
         </Route>
       </Routes>
     </>

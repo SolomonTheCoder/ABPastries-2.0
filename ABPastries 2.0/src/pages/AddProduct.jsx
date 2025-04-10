@@ -6,7 +6,7 @@ const AddProduct = () => {
     <div className='space-y-5 relative'>
       <h1 className='text-4xl my-5'>Product</h1>
       <div className='absolute -right-2 top-10'>
-        <button className='bg-red-600 w-[61px] h-[61px] text-4xl text-white rounded-full'>X</button>
+        <button className='bg-red-600 w-[51px] h-[51px] text-4xl text-white rounded-full'>X</button>
       </div>
       <section className='bg-[#F6F6F6] shadow-lg shadow-[#00000040] h-[915px] rounded-2xl p-5 space-y-10'>
         <div className='flex justify-between'>

@@ -10,11 +10,14 @@ const LoginPage = () => {
     const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
-    const handleClick = () => {
+    const handleLogin = () => {
         if (password === "admin12345") {
-            navigate("/adminpage")
+          localStorage.setItem("admin", "true")
+          navigate("/adminpage") 
+        } else {
+          alert("Incorrect password!")
         }
-    }
+      }
 
 
     return (
@@ -29,7 +32,7 @@ const LoginPage = () => {
                     <input className='bg-[#D9D9D9] shadow-inner shadow-[#00000017] rounded-2xl w-[311px] h-[39px] px-4 text-2xl' type="password" name="password" id="" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div>
-                    <button className='bg-[#910F3F] px-10 py-2 text-white rounded-2xl text-2xl' onClick={handleClick}>Login</button>
+                    <button className='bg-[#910F3F] px-10 py-2 text-white rounded-2xl text-2xl' onClick={handleLogin}>Login</button>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 
-const ClientTemplate = () => {
+const ClientLayout = () => {
     return (
         <div>
             <Navbar />
@@ -14,4 +14,4 @@ const ClientTemplate = () => {
     )
 }
 
-export default ClientTemplate
+export default ClientLayout
