@@ -19,9 +19,9 @@
   transform: scale(1.2);
 }
 
-.About{
+/* .About{
     background-image: url("../assets/images/Rectangle 4.png");
-}
+} */
 
 .Blurb{
 background-image: url('../assets/images/Rectangle 5.png');
@@ -31,8 +31,3 @@ background-image: url('../assets/images/Rectangle 5.png');
     font-family: "Unkempt",sans-serif;
 }
 
-@media (max-width:640px) {
-  .About{
-    background-image: url("../assets/images/Rectangle 57.png");
-}
-}

@@ -13,29 +13,25 @@ import 'swiper/css/effect-fade';
 const Hero = () => {
     return (
         <>
-            <div className="relative -mt-[56px]">
-                <button className="swiper-button-prev-custom absolute left-0 top-1/2 w-20 -translate-y-1/2 text-white p-2  z-20">
-                    <img className='w-full' src={left} alt="" />
-                </button>
-                <button className="swiper-button-next-custom absolute right-0 top-1/2 w-20 -translate-y-1/2  text-white p-2  z-20 ">
-                    <img className='w-full' src={right} alt="" />
-                </button>
-
+            <div className="relative h-screen -mt-[56px]">
                 <Swiper
                     modules={[Navigation, Pagination, A11y, EffectFade]}
                     spaceBetween={0}
                     slidesPerView={1}
-                    loop={true}
                     navigation={{
                         nextEl: ".swiper-button-next-custom",
                         prevEl: ".swiper-button-prev-custom"
                     }}
+                    loop={true}
                     pagination={{ clickable: true, el: ".pagination-custom" }}
                     scrollbar={{ draggable: true }}
                     effect="fade"
                 >
                     <SwiperSlide>
                         <section className=' flex flex-col justify-center items-start h-screen bg-no-repeat bg-cover bg-center Slider1'>
+                            <button className="swiper-button-prev-custom absolute left-0 top-1/2 w-20 -translate-y-1/2 text-white p-2  z-20">
+                                <img className='w-full' src={left} alt="" />
+                            </button>
                             <div className="text-white text-6xl pl-30  md:text-black md:text-8xl">
                                 <p>YOUR</p>
                                 <p>BAKED</p>
@@ -50,6 +46,9 @@ const Hero = () => {
 
                     <SwiperSlide>
                         <section className='flex flex-col justify-center items-start h-screen bg-no-repeat bg-cover bg-center Slider2'>
+                            <button className="swiper-button-next-custom absolute right-0 top-1/2 w-20 -translate-y-1/2  text-white p-2  z-20 ">
+                                <img className='w-full' src={right} alt="" />
+                            </button>
                             <div className='text-white text-6xl pl-30 md:text-black md:text-8xl  '>
                                 <p>YOUR</p>
                                 <p className='text-[#108506]'>LOCAL</p>

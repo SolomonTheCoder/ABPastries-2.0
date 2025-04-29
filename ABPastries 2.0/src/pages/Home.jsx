@@ -83,7 +83,7 @@ const Home = () => {
                 </Swiper>
                 <div className='product-pagination-custom absolute bottom-5 left-0 right-0 z-10 flex justify-center  px-4 py-2 rounded-full'></div>
             </section>
-            <section className="About relative h-svh flex flex-row md:justify-between items-center gap-10 p-5  bg-no-repeat bg-cover ">
+            <section className="About bg-[url('/i/Rectangle57.png')]  md:bg-[url('/i/Rectangle4.png')] relative h-svh flex flex-row md:justify-between items-center gap-10 p-5  bg-no-repeat bg-cover ">
                 <div className='Aboutimage hidden md:flex'>
                     <img className='z-10 ' src={front} alt="" />
                     <img className='-ml-110' src={back} alt="" />
